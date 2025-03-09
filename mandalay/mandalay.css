@@ -1,0 +1,138 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+:root {
+    --flex:flex;
+    --just:space-around;
+    --wrap:wrap;
+    --center:center;
+} 
+
+
+body {
+    font-family: "Exo 2", serif;
+    background-color: lightblue;
+}
+
+.navbar-container {
+    display: grid;
+    grid-template-columns:1fr ;
+    padding: auto 10px;    
+    background-color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 11;
+}
+.info {
+    display: flex;
+    gap: 50px;
+}
+.info a{
+    text-decoration: none;
+    color: black;
+}
+.info a::after {
+    content: '';
+    position: absolute;
+    height: 2.5px;
+    background-color: black;
+    width: 0%;
+    left: 20px;
+    transition: all 0.5s linear;
+}
+.info a:hover::after {
+    background-color: lightblue;
+
+}
+
+.container {
+    display: var(--flex);
+    flex-wrap: var(--wrap);
+    justify-content: var(--center);
+    width: 100%;
+    
+}
+.container div h1 {
+    width: 100%;
+}
+.header p {
+    display: flex;
+    width: 100%;
+    font-weight: 500;
+    font-size: 50px;
+    position: relative;
+    top: 20px;
+    
+}
+
+.imgContainer,  .img2Container{
+    display: var(--flex);
+    justify-content:var(--just);
+    flex-wrap:var(--wrap);
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.imgContainer img ,  .img2Container img, .img3Container img ,.img4Container img {
+    border-radius: 15px;
+}
+.imgContainer div p {
+    width: 600px;
+    position: relative;
+
+}
+.img2Container {
+    gap: 200px;
+}
+.img2Container div p {
+    width: 700px;
+}
+.img3Container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto 40px;
+}
+
+.img4Container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 800px;
+    background-color: coral;
+    padding: 10px;
+    margin-top: 30px;
+    color: lightblue;
+}
+.box1 {
+    position: relative;
+    left: -50px;
+}
+.fa-facebook {
+    background-color:blue;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.box2 {
+    position: relative;
+    left: 50px;
+    
+}
+.fa-twitter {
+    background-color:lightskyblue;
+    color: white;
+    padding: 5px;   
+    border-radius: 10px;
+    margin-left: 20px;
+}
